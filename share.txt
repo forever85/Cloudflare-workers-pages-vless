@@ -1,0 +1,4 @@
+vless://83b75874-0cd8-4715-a57d-e5884f41ced2@www.visa.com.sg:8880?encryption=none&security=none&type=ws&host=worker-deng.deng2518728.workers.dev&path=%2F%3Fed%3D2048#worker-deng.deng2518728.workers.dev
+
+
+vless://83b75874-0cd8-4715-a57d-e5884f41ced2@www.visa.com.sg:8880?encryption=none&security=none&type=ws&host=worker-forever2.deng2518728.workers.dev&path=%2F%3Fed%3D2048#worker-forever2.deng2518728.workers.dev
