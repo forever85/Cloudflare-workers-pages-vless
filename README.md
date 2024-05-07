@@ -1,20 +1,39 @@
-## Cloudflare-workers/pages代理脚本
-
-### 方案一支持workers部署：实现vless+ws+tls与vless+ws两种代理节点
-
-### 方案二支持pages部署：仅实现vless+ws+tls代理节点
-
-### 详细说明教程请参考[甬哥博客及视频教程](https://ygkkk.blogspot.com/2023/07/cfworkers-vless.html)
+# Cloudflare-workers/pages代理脚本
 --------------------------------
-### CF vless代码（_worker.js文件）可修改内容及说明
+## Cloudflare-workers/pages代理脚本的方案说明
+
+支持workers部署，实现vless+ws+tls与vless+ws两种代理节点
+
+支持pages部署，仅实现vless+ws+tls代理节点
+
+--------------------------------
+
+## 一：CF vless可自定义内容
+
+#### 本地直接修改_worker.js文件
 
 1、UUID必须自定义（第7行）
 
-2、如果无法访问CF类网站或者ChatGPT，说明ProxyIP失效，可更换ProxyIP.txt文件中的ProxyIP，自定义（第9行）
+2、如果无法访问CF类网站或者ChatGPT，说明ProxyIP失效，可更换ProxyIP，自定义（第9行）
 
-3、伪装网页已更新为www.wto.org，可自定义（第797行）
+3、伪装网页目前留空，显示为400界面，可自定义（第10行）
 
-重点对workers与pages、有域名与无域名，这4种情况下的节点分享做了优化显示，方便小白们理解操作
+#### CF-workers/pages界面中使用变量设置，注：变量设置的权限大于本地直接修改
+| 变量作用 | 变量名称| 变量值| 不设置该变量|
+| :--- | :--- | :--- | :--- |
+| 1、必要的uuid | uuid |符合uuid规定格式 |万人骑uuid：77a571fb-4fd2-4b37-8596-1b7d9728bb5c|
+| 2、能上CF类网站 | proxyip |ipv4地址、域名、[ipv6地址]|proxyip域名：workers.cloudflare.cyou|
+
+### CF vless查看相关分享链接，在网页输入：(workers/pages/自定义)域名/自定义uuid
+
+### 详细说明教程请参考[甬哥博客及视频教程](https://ygkkk.blogspot.com/2023/07/cfworkers-vless.html)
+
+---------------------------------
+
+
+
+
+
 
 ---------------------------------
 ### CF-CDN优选公共大厂域名脚本，苹果安卓手机平板专用，(请参考教程，在本地网络环境下运行)：
